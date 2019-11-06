@@ -3,12 +3,12 @@ import "./style.css";
 
 export default function Form() {
   const [state, setState] = React.useState({
-    firstName: "",
-    lastName: "",
-    bio: "",
-    hooks: true,
-    level: "master",
-    version: "16.5"
+    firstName: "Saurabh",
+    lastName: "Oza",
+    about: "",
+    level: "masters",
+    technology: "java",
+    freelancing: false,
   });
 
   function handleChange(evt) {
@@ -42,49 +42,49 @@ export default function Form() {
           />
         </label>
         <label>
-          <div className="heading">Bio</div>
-          <textarea name="bio" value={state.bio} onChange={handleChange} />
-        </label>
-        <label>
-          <div className="heading">With hooks</div>
-          <input
-            type="checkbox"
-            name="hooks"
-            checked={state.hooks}
-            onChange={handleChange}
-          />
+          <div className="heading">About</div>
+          <textarea name="about" value={state.about} onChange={handleChange} />
         </label>
         <div>
-          <div className="heading">Level</div>
+          <div className="heading">Degree</div>
           <label>
-            Acolyte
+            Bachelors
             <input
               type="radio"
               name="level"
-              value="acolyte"
-              checked={state.level === "acolyte"}
+              value="bachelors"
+              checked={state.level === "bachelors"}
               onChange={handleChange}
             />
           </label>
           <label>
-            Master
+            Masters
             <input
               type="radio"
               name="level"
-              value="master"
-              checked={state.level === "master"}
+              value="masters"
+              checked={state.level === "masters"}
               onChange={handleChange}
             />
           </label>
         </div>
         <label>
-          <div className="heading">Favorite version</div>
-          <select name="version" onChange={handleChange} value={state.version}>
-            <option value="16.8">v16.8.0</option>
-            <option value="16.7">v16.7.0</option>
-            <option value="16.6">v16.6.0</option>
-            <option value="16.5">v16.5.0</option>
+          <div className="heading">Technology</div>
+          <select name="technology" onChange={handleChange} value={state.technology}>
+            <option value="java">Java</option>
+            <option value="dotnet">Dot Net</option>
+            <option value="python">Python</option>
+            <option value="cpp">C++</option>
           </select>
+        </label>
+        <label>
+          <div className="heading">Interested in Freelancing?</div>
+          <input
+            type="checkbox"
+            name="freelancing"
+            checked={state.freelancing}
+            onChange={handleChange}
+          />
         </label>
       </form>
       <pre>{JSON.stringify(state,null,3)}</pre>
