@@ -73,8 +73,7 @@ export default function Form() {
           <select
             name="technology"
             onChange={handleChange}
-            value={state.technology}
-          >
+            value={state.technology}>
             <option value="java">Java</option>
             <option value="dotnet">Dot Net</option>
             <option value="python">Python</option>
