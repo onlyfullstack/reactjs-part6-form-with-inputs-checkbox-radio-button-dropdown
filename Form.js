@@ -8,7 +8,7 @@ export default function Form() {
     about: "",
     level: "masters",
     technology: "java",
-    freelancing: false,
+    freelancing: false
   });
 
   function handleChange(evt) {
@@ -70,7 +70,11 @@ export default function Form() {
         </div>
         <label>
           <div className="heading">Technology</div>
-          <select name="technology" onChange={handleChange} value={state.technology}>
+          <select
+            name="technology"
+            onChange={handleChange}
+            value={state.technology}
+          >
             <option value="java">Java</option>
             <option value="dotnet">Dot Net</option>
             <option value="python">Python</option>
@@ -87,7 +91,7 @@ export default function Form() {
           />
         </label>
       </form>
-      <pre>{JSON.stringify(state,null,3)}</pre>
+      <pre>{JSON.stringify(state, null, 3)}</pre>
     </div>
   );
 }
